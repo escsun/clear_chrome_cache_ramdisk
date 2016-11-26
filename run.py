@@ -2,15 +2,12 @@ import os
 import time
 import psutil
 import schedule
-from datetime import datetime
 
 local_drive = "E:\\"
 path_to_chrome_cache = "E:\\Chrome\\Default\\Cache\\"
 percent_size = 65
 size_in_kb = 768
 check_schedule_in_minutes = 10
-
-process_start = "Process started: %s" % datetime.now().strftime("%H:%M:%S %Y-%m-%d")
 
 
 def job():
