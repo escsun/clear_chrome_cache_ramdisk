@@ -46,7 +46,7 @@
 <p>Настройка google chrome делается аналогично как и в Windows</p>
 <p>Пример использования:</p>
 <pre><code>chrome --disk-cache-dir=/path/to/google_cache_tmpfs</code></pre>
-<p>Так же для того чтобы, не писать каждый нужно создать скрипт, например chrome_ramdisk.sh:</p>
+<p>Так же для того чтобы, не писать каждый раз, можно создать скрипт, например chrome_ramdisk.sh:</p>
 <pre><code>touch chrome_ramdisk.sh</code></pre>
 <p>С таким содержимым скрипта:</p>
 <pre>
