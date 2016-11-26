@@ -32,7 +32,7 @@ schedule.every(check_schedule_in_minutes).minutes.do(job)
 
 while True:
     schedule.run_pending()
-    if schedule.idle_seconds() % 60 == 0:
-        time_to_update = schedule.idle_seconds() / 60
-        print("Time to update in minutes: %.0f" % time_to_update)
+    time_to_update = int(schedule.idle_seconds())
+    if time_to_update % 60 == 0:
+        print("Time to update in minutes: %.0f" % (time_to_update / 60))
     time.sleep(1)
