@@ -2,12 +2,15 @@ import os
 import time
 import psutil
 import schedule
+from datetime import datetime
 
 local_drive = "E:\\"
 path_to_chrome_cache = "E:\\Chrome\\Default\\Cache\\"
-percent_size = 90
+percent_size = 65
 size_in_kb = 768
-check_schedule_in_minutes = 15
+check_schedule_in_minutes = 10
+
+process_start = "Process started: %s" % datetime.now().strftime("%H:%M:%S %Y-%m-%d")
 
 
 def job():
@@ -32,4 +35,7 @@ schedule.every(check_schedule_in_minutes).minutes.do(job)
 
 while True:
     schedule.run_pending()
+    if schedule.idle_seconds() % 60 == 0:
+        time_to_update = schedule.idle_seconds() / 60
+        print("Time to update in minutes: %.0f" % time_to_update)
     time.sleep(1)
