@@ -34,5 +34,5 @@ while True:
     schedule.run_pending()
     time_to_update = int(schedule.idle_seconds())
     if time_to_update % 60 == 0:
-        print("Time to update in minutes: %.0f" % (time_to_update / 60))
+        print("Time to update in minutes: %d" % (time_to_update / 60))
     time.sleep(1)
