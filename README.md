@@ -19,6 +19,7 @@
 <li>Basic settings - Disk size - 512 mb или выше;</li>
 <li>Load/Save - Image File - RAMDisk.img;</li>
 <li>Load Disk Image at Startup - True;</li>
+<li>Save Disk Image on Shutdown - True;</li>
 <li>Save Disk Image Now;</li>
 <li>Start RAMDisk;</li>
 </ul>
